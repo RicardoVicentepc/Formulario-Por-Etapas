@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="steps">
+        <div id="StepTwo">
+            <div  style="margin-top: 100px; margin-left: 100px;">
+                <input placeholder="Insira seu nome" type="text">
+                <input placeholder="Insira seu nome" type="text">
+                <input placeholder="Insira seu nome" type="text">
+                <input placeholder="Insira seu nome" type="text">
+            </div>
+            <div style="margin-top: 50px; margin-left: 380px;">
+                <button class="btn" onclick="mudarParaStep2()">Proximo</button>
+            </div>
+        </div>
+        <div id="StepOne">
+            <div  style="margin-top: 100px; margin-left: 100px;">
+                <input placeholder="Insira seu sobreNome" type="text">
+                <input placeholder="Insira seu sobreNome" type="text">
+                <input placeholder="Insira seu sobreNome" type="text">
+                <input placeholder="Insira seu sobreNome" type="text">
+            </div>
+            <div style="margin-top: 50px; margin-left: 310px; display: flex;">
+                <button class="btn" onclick="voltarParaStep1()">Voltar</button>
+                <button class="btn" onclick="mudarParaStep3()">Próximo</button>
+            </div>
+        </div>
+        <div id="StepTree">
+            <div  style="margin-top: 100px; margin-left: 100px;">
+                <input placeholder="Insira sua idade" type="text">
+                <input placeholder="Insira sua idade" type="text">
+                <input placeholder="Insira sua idade" type="text">
+                <input placeholder="Insira sua idade" type="text">
+            </div>
+            <div style="margin-top: 50px; margin-left: 310px; display: flex;">
+                <button class="btn" onclick="voltarParaStep2()">Voltar</button>
+                <button class="btn" onclick="Cadastro()">Finalizar</button>
+            </div>
+
+        </div>
+    </div><br><br>
+    <div id="foi"></div>
+    
+</body>
+</html>
+<script>
+    function mudarParaStep2(){
+        StepTwo.style.display = "none"
+        StepOne.style.display = "grid"
+       
+    }
+    function mudarParaStep3(){
+        StepOne.style.display = "none"
+        StepTree.style.display = "grid"
+       
+    }
+    function voltarParaStep2(){
+        StepTree.style.display = "none"
+        StepOne.style.display = "grid"
+    }
+    function voltarParaStep1(){
+        StepOne.style.display = "none"
+        StepTwo.style.display = "grid"
+
+    }
+    function Cadastro(){
+        alert("Usuario Cadastrado")
+    }
+</script>
